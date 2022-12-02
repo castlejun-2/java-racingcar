@@ -25,4 +25,14 @@ public class Validator {
         if (nameSet.size() != names.size())
             throw new IllegalArgumentException("자동차의 이름은 고유해야 한다.");
     }
+
+    public static void isValidRoundNumber(String number) {
+        for (int i = 0; i < number.length(); i++)
+            isDigit(number.charAt(i));
+    }
+
+    public static void isDigit(Character c) {
+        if (!Character.isDigit(c))
+            throw new IllegalArgumentException("시도 횟수는 숫자여야 한다.");
+    }
 }
