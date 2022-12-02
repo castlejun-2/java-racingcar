@@ -9,8 +9,14 @@ import java.lang.IllegalArgumentException;
 public class Validator {
     public static void isValidNameList(final List<String> names) {
         for (int i = 0; i < names.size(); i++) {
+            isValidName(names.get(i));
             isDuplicate(names);
         }
+    }
+
+    public static void isValidName(final String name) {
+        if (name.length() > 5 || name.length() < 1)
+            throw new IllegalArgumentException("자동차의 이름은 5글자 이하여야 한다.");
     }
 
     public static void isDuplicate(List<String> names) {
