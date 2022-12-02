@@ -1,20 +1,19 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-
-version = '1.0.0'
+plugins {
+    id 'java'
+}
 
 repositories {
-    maven { url 'https://jitpack.io' }
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation('com.github.woowacourse-projects:mission-utils:1.0.0')
+    implementation 'com.github.woowacourse-projects:mission-utils:1.0.0'
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(8)
+        languageVersion = JavaLanguageVersion.of(11)
     }
 }
 
