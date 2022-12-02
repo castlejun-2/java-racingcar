@@ -19,4 +19,16 @@ public class InputView {
             return getParticipants(scanner);
         }
     }
+
+    public static int getRoundNumber(final Scanner scanner) {
+        try {
+            OutputView.println("시도할 회수는 몇회인가요?");
+            String number = scanner.nextLine();
+            Validator.isValidRoundNumber(number);
+            return Integer.parseInt(number);
+        } catch (IllegalArgumentException e) {
+            OutputView.printError(e.getMessage());
+            return getRoundNumber(scanner);
+        }
+    }
 }

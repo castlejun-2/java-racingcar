@@ -9,5 +9,6 @@ public class Application {
         final Scanner scanner = new Scanner(System.in);
 
         final List<String> participants = InputView.getParticipants(scanner);
+        int round = InputView.getRoundNumber(scanner);
     }
 }
