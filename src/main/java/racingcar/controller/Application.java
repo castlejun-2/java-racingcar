@@ -2,6 +2,8 @@ package racingcar.controller;
 
 import java.util.Scanner;
 import java.util.List;
+
+import racingcar.domain.Cars;
 import racingcar.view.InputView;
 
 public class Application {
@@ -9,6 +11,7 @@ public class Application {
         final Scanner scanner = new Scanner(System.in);
 
         final List<String> participants = InputView.getParticipants(scanner);
+        Cars cars = new Cars(participants);
         int round = InputView.getRoundNumber(scanner);
     }
 }
