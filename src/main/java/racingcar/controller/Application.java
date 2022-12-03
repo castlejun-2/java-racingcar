@@ -11,7 +11,9 @@ public class Application {
         final Scanner scanner = new Scanner(System.in);
 
         final List<String> participants = InputView.getParticipants(scanner);
-        Cars cars = new Cars(participants);
+        final Cars cars = new Cars(participants);
         int round = InputView.getRoundNumber(scanner);
+
+
     }
 }
