@@ -1,4 +1,5 @@
 package racingcar.domain;
+import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
     private final String name;
@@ -8,5 +9,20 @@ public class Car {
         this.name = name;
     }
 
-    // 추가 기능 구현
+    public void move_forward() {
+        if (getRandomNumber() >= 4)
+            this.position = this.increasePosition(this.getPosition());
+    }
+
+    public int getRandomNumber() {
+        return Randoms.pickNumberInRange(0,9);
+    }
+
+    public int getPosition() {
+        return this.position;
+    }
+
+    public int increasePosition(int position) {
+        return position + 1;
+    }
 }
