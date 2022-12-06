@@ -29,4 +29,10 @@ public class Car {
     public String getCarName() {
         return this.name;
     }
+
+    public boolean isOnPosition(int _position) {
+        if (_position == this.getPosition())
+            return true;
+        return false;
+    }
 }
