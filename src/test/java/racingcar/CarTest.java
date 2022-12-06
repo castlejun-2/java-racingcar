@@ -24,4 +24,10 @@ public class CarTest {
     void increasePositionTest() {
         assertThat(testCar.increasePosition(testCar.getPosition())).isEqualTo(1);
     }
+
+    @Test
+    @DisplayName("Car의 이름이 정상적으로 반환되는지 확인한다.")
+    void getCarNameTest() {
+        assertThat(testCar.getCarName()).isEqualTo("test");
+    }
 }
