@@ -30,4 +30,13 @@ public class CarsTest {
 
         assertThat(cars.getWinner().contains("hip")).isEqualTo(true);
     }
+
+    @Test
+    @DisplayName("현재 최대 위치 반환 함수 테스트")
+    void getMaxPositionTest() {
+        cars.getCarInfo(0).move_forward();
+        cars.getCarInfo(0).move_forward();
+
+        assertThat(cars.getMaxPosition()).isEqualTo(2);
+    }
 }
