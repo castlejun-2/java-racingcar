@@ -16,5 +16,7 @@ public class Application {
         int round = InputView.getRoundNumber(scanner);
 
         final RacingGame racingGame = new RacingGame(cars, round);
+
+        while (!racingGame.isEnd()) {}
     }
 }
