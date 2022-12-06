@@ -3,7 +3,7 @@ package racingcar.view;
 import racingcar.domain.Cars;
 
 public class OutputView {
-    final static void println(final String msg) {
+    public final static void println(final String msg) {
         System.out.println(msg);
     }
 
