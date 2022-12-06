@@ -25,4 +25,8 @@ public class Car {
     public int increasePosition(int position) {
         return position + 1;
     }
+
+    public String getCarName() {
+        return this.name;
+    }
 }
