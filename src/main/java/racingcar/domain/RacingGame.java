@@ -2,7 +2,9 @@ package racingcar.domain;
 
 public class RacingGame {
     private int round;
+    private Cars cars;
     public RacingGame(Cars cars, int round) {
+        this.cars = cars;
         this.round = round;
     }
 
@@ -14,6 +16,11 @@ public class RacingGame {
 
     public int getRound() {
         return this.round;
+    }
+
+    public void race() {
+        Cars.move();
+        this.round = this.subRound(this.round);
     }
 
     public int subRound(int round) {
