@@ -11,8 +11,10 @@ public class RacingGame {
     }
 
     public boolean isEnd(int round) {
-        if (round <= 0)
+        if (round <= 0) {
+            OutputView.printWinner(this.cars);
             return true;
+        }
         return false;
     }
 
