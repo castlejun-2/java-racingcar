@@ -15,4 +15,8 @@ public class RacingGame {
     public int getRound() {
         return this.round;
     }
+
+    public int subRound(int round) {
+        return round - 1;
+    }
 }
