@@ -20,4 +20,12 @@ public class Cars {
             this.carList.get(i).move_forward();
         }
     }
+
+    public int getCarsLength() {
+        return this.carList.size();
+    }
+
+    public Car getCarInfo(int index) {
+        return this.carList.get(index);
+    }
 }
