@@ -17,6 +17,6 @@ public class Application {
 
         final RacingGame racingGame = new RacingGame(cars, round);
 
-        while (!racingGame.isEnd()) {}
+        while (!racingGame.isEnd(racingGame.getRound())) {}
     }
 }
