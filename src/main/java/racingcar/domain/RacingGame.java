@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.view.OutputView;
+
 public class RacingGame {
     private int round;
     private Cars cars;
@@ -19,8 +21,9 @@ public class RacingGame {
     }
 
     public void race() {
-        cars.move();
+        this.cars.move();
         this.round = this.subRound(this.round);
+        OutputView.printRaceResult(this.cars);
     }
 
     public int subRound(int round) {
