@@ -1,7 +1,9 @@
 package racingcar.domain;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Cars {
     List<Car> carList = new ArrayList<>();
@@ -27,5 +29,11 @@ public class Cars {
 
     public Car getCarInfo(int index) {
         return this.carList.get(index);
+    }
+
+    public int getMaxPosition() {
+        return Collections.max(this.carList.stream()
+                .map(Car::getPosition)
+                .collect(Collectors.toList()));
     }
 }
