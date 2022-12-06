@@ -19,6 +19,6 @@ public class OutputView {
     }
 
     public final static void printWinner(Cars cars) {
-        System.out.println("\n최종 우승자 : "+cars.getWinner());
+        System.out.println("최종 우승자 : "+cars.getWinner());
     }
 }
