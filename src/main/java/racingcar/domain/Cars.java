@@ -14,4 +14,10 @@ public class Cars {
         for (int i = 0; i < carNames.size(); i++)
             carList.add(new Car(carNames.get(i)));
     }
+
+    public void move() {
+        for (int i = 0; i < this.carList.size(); i++) {
+            this.carList.get(i).move_forward();
+        }
+    }
 }

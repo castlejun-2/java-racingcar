@@ -19,7 +19,7 @@ public class RacingGame {
     }
 
     public void race() {
-        Cars.move();
+        cars.move();
         this.round = this.subRound(this.round);
     }
 
