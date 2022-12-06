@@ -8,6 +8,7 @@ import java.lang.IllegalArgumentException;
 
 public class Validator {
     public static void isValidNameList(final List<String> names) {
+        isExist(names.size());
         for (int i = 0; i < names.size(); i++) {
             isValidName(names.get(i));
             isDuplicate(names);
@@ -34,5 +35,10 @@ public class Validator {
     public static void isDigit(Character c) {
         if (!Character.isDigit(c))
             throw new IllegalArgumentException("시도 횟수는 숫자여야 한다.");
+    }
+
+    public static void isExist(int size) {
+        if (size <= 0)
+            throw new IllegalArgumentException("이름은 1~5 길이 사이의 영문자여야 한다.");
     }
 }
