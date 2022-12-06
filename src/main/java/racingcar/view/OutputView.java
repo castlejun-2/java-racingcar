@@ -13,7 +13,8 @@ public class OutputView {
 
     public final static void printRaceResult(Cars cars) {
         for (int i = 0; i < cars.getCarsLength(); i++) {
-            System.out.print(cars.getCarInfo(i).getCarName()+" : "+"-".repeat(cars.getCarInfo(i).getPosition()));
+            System.out.println(cars.getCarInfo(i).getCarName()+" : "+"-".repeat(cars.getCarInfo(i).getPosition()));
         }
+        println("");
     }
 }
