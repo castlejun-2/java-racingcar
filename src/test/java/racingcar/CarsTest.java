@@ -1,6 +1,7 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racingcar.domain.Cars;
@@ -13,9 +14,20 @@ import java.util.List;
 import java.util.Arrays;
 
 public class CarsTest {
+    Cars cars;
     @Test
+    @BeforeEach
     void createCarsObj() {
         List<String> names = Arrays.asList("hip,pop,dance");
-        Cars cars = new Cars(names);
+        cars = new Cars(names);
+    }
+
+    @Test
+    @DisplayName("최종 우승자 반환 함수 테스트")
+    void getWinnerTest() {
+        cars.getCarInfo(0).move_forward();
+        cars.getCarInfo(0).move_forward();
+
+        assertThat(cars.getWinner().contains("hip")).isEqualTo(true);
     }
 }
