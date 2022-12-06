@@ -30,4 +30,11 @@ public class CarTest {
     void getCarNameTest() {
         assertThat(testCar.getCarName()).isEqualTo("test");
     }
+
+    @Test
+    @DisplayName("Car 객체가 현재 주어진 Position 위치에 있는지 여부를 확인한다.")
+    void checkCarPositionTest() {
+        assertThat(testCar.isOnPosition(0)).isEqualTo(true);
+        assertThat(testCar.isOnPosition(1)).isEqualTo(false);
+    }
 }
