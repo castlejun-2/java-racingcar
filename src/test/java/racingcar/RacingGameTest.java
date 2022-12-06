@@ -30,4 +30,10 @@ public class RacingGameTest {
     void subRoundTest() {
         assertThat(racingGame.subRound(racingGame.getRound())).isEqualTo(2);
     }
+
+    @Test
+    @DisplayName("게임 종료 여부 테스트")
+    void isEndTest() {
+        assertThat(racingGame.isEnd(0)).isEqualTo(true);
+    }
 }
